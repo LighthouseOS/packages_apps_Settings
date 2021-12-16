@@ -46,6 +46,11 @@ android_library {
 
     srcs: ["src/**/*.java"],
 
+    resource_dirs: [
+        "res",
+        "res-pixel"
+    ],
+
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
         "androidx.slice_slice-builders",
@@ -76,7 +81,10 @@ android_library {
         "windowExtLib",
         "custom-preference",
         "vendor.lineage.fastcharge-V1.0-java",
+        "SettingsGoogle-lib",
     ],
+    manifest: "AndroidManifest.xml",
+    additional_manifests: ["SettingsGoogle-Manifest.xml"],
 
     libs: [
         "telephony-common",
